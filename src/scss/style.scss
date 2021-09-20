@@ -1,0 +1,12 @@
+@import "resets";
+@import "variables";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: $navy;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
