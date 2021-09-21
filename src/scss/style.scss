@@ -3,10 +3,102 @@
 
 html {
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
     color: $navy;
-    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+header::before {
+    content:'';
+    position: fixed;
+    background-color: $blue;
+    width: 100%;
+    height: 5rem;
+    z-index: 2;
+    filter: drop-shadow(0px 1px 3px $navy);
+}
+
+.logo {
+    position: fixed;
+    z-index: 2;
+    width: 4.25rem;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+nav {
+    background-color: $blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 15rem;
+    padding-top: 5rem;
+    transform: translateY(-100%);
+    transition: transform .3s;
+    z-index: 1;
+
+    &.active {
+        transform: translateY(0);
+    }
+
+    & .navMenu {
+        text-align: center;
+        list-style-type: none;
+
+        li {
+            padding: 1rem;
+            border-bottom: solid 1px $blue;
+
+            a {
+                color: white;
+                font-size: 1.15rem;
+                font-weight: 700;
+                text-decoration: none;
+            }
+        }
+
+        li:first-of-type {
+            background-color: $lightest-blue;
+        }
+        li:nth-of-type(2) {
+            background-color: $lighter-blue;
+        }
+        li:nth-of-type(3) {
+            background-color: $light-blue;
+        }
+        li:last-of-type {
+            background-color: $blue;
+        }
+    }
+}
+  
+button#menu-toggle {
+    background-color: $lightest-blue;
+    position: fixed;
+    z-index: 2;
+    top: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    border: solid 1px $navy;
+    border-radius: 3px;
+}
+
+main {
+    padding-top: 25%;
+}
+
+h1 {
+    text-align: left;
+    font-size: 4.75rem;
+    padding: 2rem;
 }
