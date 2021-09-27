@@ -1,5 +1,7 @@
 @import "resets";
 @import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Serif:wght@400;700&display=swap');
+
 
 html {
     font-size: 100%;
@@ -7,41 +9,35 @@ html {
 }
 
 body {
-    color: $navy;
-    font-family: Arial, Helvetica, sans-serif;
+    color: $warm-brown;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25em;
+    line-height: 1.25;
 }
 
 header::before {
-    content:'';
-    position: fixed;
-    background-color: $blue;
+    content: '';
+    background: $mauve-taupe;
+    filter: drop-shadow(0px 1px 5px $warm-brown);
     width: 100%;
-    height: 5rem;
-    z-index: 2;
-    filter: drop-shadow(0px 1px 3px $navy);
-}
-
-.logo {
+    height: 4.15em;
     position: fixed;
     z-index: 2;
-    width: 4.25rem;
-    padding-left: 10px;
-    padding-top: 10px;
 }
 
 nav {
-    background-color: $blue;
+    background: $mauve-taupe;
+    width: 100%;
+    height: 15.22em;
+    padding-top: 5rem;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
-    height: 15rem;
-    padding-top: 5rem;
+    z-index: 1;
     transform: translateY(-100%);
     transition: transform .3s;
-    z-index: 1;
 
     &.active {
         transform: translateY(0);
@@ -52,53 +48,137 @@ nav {
         list-style-type: none;
 
         li {
-            padding: 1rem;
-            border-bottom: solid 1px $blue;
+            padding: 0.75em;
+            border-bottom: solid 1px $puce;
 
             a {
                 color: white;
-                font-size: 1.15rem;
+                font-size: 0.9em;
                 font-weight: 700;
                 text-decoration: none;
             }
-        }
-
-        li:first-of-type {
-            background-color: $lightest-blue;
-        }
-        li:nth-of-type(2) {
-            background-color: $lighter-blue;
-        }
-        li:nth-of-type(3) {
-            background-color: $light-blue;
-        }
-        li:last-of-type {
-            background-color: $blue;
         }
     }
 }
   
 button#menu-toggle {
-    background-color: $lightest-blue;
+    color: $warm-brown;
+    background: $laurel-green;
+    font-size: 1.5em;
+    text-align: center;
+    width: 3.125rem;
+    height: 3.125rem;
+    padding: 8px;
     position: fixed;
-    z-index: 2;
     top: 1rem;
     right: 1rem;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    padding: 8px;
-    cursor: pointer;
-    border: solid 1px $navy;
+    z-index: 3;
+    border: solid 1px $warm-brown;
     border-radius: 3px;
+    cursor: pointer;
+}
+
+main, #hero, #skills, #contact {
+    background-color: $misty-rose;
+    background: $misty-rose-bg;
+}
+
+#about, #projects {
+    background-color: $puce;
+    background: $puce-bg;
+}
+
+#about, #skills, #projects, #contact {
+    border-top: 7px solid hsla(355, 12, 28, .15);
 }
 
 main {
-    padding-top: 25%;
+    text-align: center;
+    padding-top: 5em;
+}
+
+h1, h2 {
+    font-family: 'Noto Serif', serif;
 }
 
 h1 {
-    text-align: left;
-    font-size: 4.75rem;
-    padding: 2rem;
+    font-size: 3rem;
+}
+
+#hero {
+    padding: 1.75em;
+
+    p {
+        font-size: 1.25em;
+        padding: .5em 0 3em 0;
+    }
+}
+
+.highlight {
+    color: $russian-green;
+    font-weight: 700;
+}
+
+.profile-photo {
+    width: 12.5rem;
+    border-radius: 50%;
+    border: 5px solid $laurel-green;
+    position: relative;
+    bottom: 15.25em;
+}
+
+#about::before {
+    content: '';
+    display: block;
+    background: $puce-bg;
+    border-radius: 50%;
+    border-top: 3px solid hsla(355, 12, 28, .15);
+    height: 12em;
+    width: 12em;
+    position: relative;
+    bottom: 4em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#about {
+    height: 19em;
+
+    p {
+        padding: 0 1.2em 0 1.2em;
+        position: relative;
+        bottom: 14.5em;
+    }
+}
+
+.round-section-header {
+    color: $laurel-green;
+    background: $russian-green;
+    border-radius: 50%;
+    width: 6.25rem;
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.skills-header {
+    bottom: 8.25em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#skills::before {
+    content: '';
+    display: block;
+    background: $misty-rose-bg;
+    border-radius: 50%;
+    border-top: 3px solid hsla(355, 12, 28, .15);
+    height: 7.5rem;
+    width: 7.5rem;
+    position: relative;
+    bottom: 2.75em;
+    left: 50%;
+    transform: translateX(-50%);  
 }

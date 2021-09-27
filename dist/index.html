@@ -11,7 +11,6 @@
 
 <body>
     <header>
-        <img class="logo" src="img/amh-logo.png" alt="">
         <button id="menu-toggle"
                 class="fas fa-bars fa-2x"
                 aria-label="Open navigation menu"
@@ -28,16 +27,20 @@
     </header>
     
     <main>
-        <section id="about">
+        <section id="hero">
             <h1>Hello World, I'm Amber.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt deserunt ab quos sint numquam, perspiciatis eligendi deleniti error veniam explicabo impedit dolore, neque voluptas dolor debitis iusto similique? Quas, eos!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt deserunt ab quos sint numquam, perspiciatis eligendi deleniti error veniam explicabo impedit dolore, neque voluptas dolor debitis iusto similique? Quas, eos!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt deserunt ab quos sint numquam, perspiciatis eligendi deleniti error veniam explicabo impedit dolore, neque voluptas dolor debitis iusto similique? Quas, eos!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt deserunt ab quos sint numquam, perspiciatis eligendi deleniti error veniam explicabo impedit dolore, neque voluptas dolor debitis iusto similique? Quas, eos!</p>
+            <p>I'm a <span class="highlight">front-end developer</span> and <span class="highlight">web designer</span>.</p>
+        </section>
+
+        <section id="about">
+            <img src="img/amber-photo.png" alt="Amber Harmon profile photo" class="profile-photo">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt deserunt ab quos sint numquam, perspiciatis eligendi deleniti error veniam explicabo impedit dolore, neque voluptas dolor debitis iusto similique? Quas, eos!</p>
         </section>
     
         <section id="skills">
+            <div class="round-section-header skills-header">
+                <i class="fas fa-code fa-2x"></i>
+            </div>
             <h2>My technical skills include:</h2>
             <ul>
                 <li>thing</li>
@@ -52,6 +55,9 @@
         </section>
             
         <section id="projects">
+            <div class="round-section-header projects-header">
+                <i class="fas fa-file-alt fa-2x"></i>
+            </div>
             <h2>Here is some of my work.</h2>
             <div class="project-card">
                 <p>project info here</p>
@@ -62,6 +68,9 @@
         </section>
     
         <section id="contact">
+            <div class="round-section-header contact-header">
+                <i class="fas fa-comments fa-2x"></i>
+            </div>
             <h2>Like what you see? Let's connect!</h2>
             <p>Email: blah blah @ blah.com</p>
             <a href="">Resume</a>

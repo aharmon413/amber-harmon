@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Serif:wght@400;700&display=swap");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -16,46 +17,40 @@ html {
 }
 
 body {
-  color: #274659;
-  font-family: Arial, Helvetica, sans-serif;
+  color: #503f40;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25em;
+  line-height: 1.25;
 }
 
 header::before {
   content: '';
-  position: fixed;
-  background-color: #56d0eb;
+  background: #9f6579;
+  -webkit-filter: drop-shadow(0px 1px 5px #503f40);
+          filter: drop-shadow(0px 1px 5px #503f40);
   width: 100%;
-  height: 5rem;
-  z-index: 2;
-  -webkit-filter: drop-shadow(0px 1px 3px #274659);
-          filter: drop-shadow(0px 1px 3px #274659);
-}
-
-.logo {
+  height: 4.15em;
   position: fixed;
   z-index: 2;
-  width: 4.25rem;
-  padding-left: 10px;
-  padding-top: 10px;
 }
 
 nav {
-  background-color: #56d0eb;
+  background: #9f6579;
+  width: 100%;
+  height: 15.22em;
+  padding-top: 5rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  height: 15rem;
-  padding-top: 5rem;
+  z-index: 1;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
-  z-index: 1;
 }
 
 nav.active {
@@ -69,55 +64,145 @@ nav .navMenu {
 }
 
 nav .navMenu li {
-  padding: 1rem;
-  border-bottom: solid 1px #56d0eb;
+  padding: 0.75em;
+  border-bottom: solid 1px #cc99a8;
 }
 
 nav .navMenu li a {
   color: white;
-  font-size: 1.15rem;
+  font-size: 0.9em;
   font-weight: 700;
   text-decoration: none;
 }
 
-nav .navMenu li:first-of-type {
-  background-color: #9fe4f4;
-}
-
-nav .navMenu li:nth-of-type(2) {
-  background-color: #84ddf1;
-}
-
-nav .navMenu li:nth-of-type(3) {
-  background-color: #6dd6ee;
-}
-
-nav .navMenu li:last-of-type {
-  background-color: #56d0eb;
-}
-
 button#menu-toggle {
-  background-color: #9fe4f4;
+  color: #503f40;
+  background: #bdccb3;
+  font-size: 1.5em;
+  text-align: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 8px;
   position: fixed;
-  z-index: 2;
   top: 1rem;
   right: 1rem;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  padding: 8px;
-  cursor: pointer;
-  border: solid 1px #274659;
+  z-index: 3;
+  border: solid 1px #503f40;
   border-radius: 3px;
+  cursor: pointer;
+}
+
+main, #hero, #skills, #contact {
+  background-color: #f2dbd9;
+  background: url(/dist/img/background-misty-rose.png);
+}
+
+#about, #projects {
+  background-color: #cc99a8;
+  background: url(/dist/img/background-puce.png);
+}
+
+#about, #skills, #projects, #contact {
+  border-top: 7px solid rgba(80, 63, 64, 0.15);
 }
 
 main {
-  padding-top: 25%;
+  text-align: center;
+  padding-top: 5em;
+}
+
+h1, h2 {
+  font-family: 'Noto Serif', serif;
 }
 
 h1 {
-  text-align: left;
-  font-size: 4.75rem;
-  padding: 2rem;
+  font-size: 3rem;
+}
+
+#hero {
+  padding: 1.75em;
+}
+
+#hero p {
+  font-size: 1.25em;
+  padding: .5em 0 3em 0;
+}
+
+.highlight {
+  color: #566c57;
+  font-weight: 700;
+}
+
+.profile-photo {
+  width: 12.5rem;
+  border-radius: 50%;
+  border: 5px solid #bdccb3;
+  position: relative;
+  bottom: 15.25em;
+}
+
+#about::before {
+  content: '';
+  display: block;
+  background: url(/dist/img/background-puce.png);
+  border-radius: 50%;
+  border-top: 3px solid rgba(80, 63, 64, 0.15);
+  height: 12em;
+  width: 12em;
+  position: relative;
+  bottom: 4em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#about {
+  height: 19em;
+}
+
+#about p {
+  padding: 0 1.2em 0 1.2em;
+  position: relative;
+  bottom: 14.5em;
+}
+
+.round-section-header {
+  color: #bdccb3;
+  background: #566c57;
+  border-radius: 50%;
+  width: 6.25rem;
+  height: 6.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.skills-header {
+  bottom: 8.25em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#skills::before {
+  content: '';
+  display: block;
+  background: url(/dist/img/background-misty-rose.png);
+  border-radius: 50%;
+  border-top: 3px solid rgba(80, 63, 64, 0.15);
+  height: 7.5rem;
+  width: 7.5rem;
+  position: relative;
+  bottom: 2.75em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 /*# sourceMappingURL=style.css.map */
