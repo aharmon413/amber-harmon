@@ -111,7 +111,7 @@ main {
   padding-top: 4.85em;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
   font-family: 'Noto Serif', serif;
 }
 
@@ -207,7 +207,7 @@ h1 {
 }
 
 #skills {
-  height: 19em;
+  height: 19.25em;
 }
 
 #skills h2, #skills ul {
@@ -246,7 +246,96 @@ h1 {
   background: url("/img/background-puce.png");
 }
 
+#projects {
+  height: 55em;
+}
+
 #projects h2 {
+  position: relative;
+  bottom: 5.25em;
+}
+
+#projects .project-card {
+  background-color: #f8f4f2;
+  border: 3px solid #566c57;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  position: relative;
+  bottom: 9rem;
+}
+
+#projects .project-card h3 {
+  padding: 10px 10px 0 10px;
+}
+
+#projects .project-card h4 {
+  padding: 10px 10px 0 10px;
+}
+
+#projects .project-card p, #projects .project-card li {
+  font-size: 1.1rem;
+}
+
+#projects .project-card .project-img {
+  display: block;
+  border: 1px solid #503f40;
+  border-radius: 5px;
+  width: 90%;
+  margin: 15px auto 10px auto;
+}
+
+#projects .project-card .code-link, #projects .project-card .live-link {
+  display: inline-block;
+  color: #f8f4f2;
+  background: #9f6579;
+  font-weight: 700;
+  padding: .5rem;
+  margin: .5rem;
+  width: 90%;
+  border-radius: 10px;
+  border-bottom: 2px solid #503f40;
+  border-right: 2px solid #503f40;
+  text-decoration: none;
+}
+
+#projects .project-card .code-link:active, #projects .project-card .live-link:active {
+  background: #cc99a8;
+  border-bottom: 2px solid #cc99a8;
+  border-right: 2px solid #cc99a8;
+  -webkit-box-shadow: inset 2px 2px 3px #503f40;
+          box-shadow: inset 2px 2px 3px #503f40;
+}
+
+#projects .project-card .technologies {
+  margin: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: auto / 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  gap: 10px 10px;
+}
+
+#projects .project-card .features {
+  list-style-type: circle;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.contact-header {
+  bottom: 8.45em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#contact h2 {
+  padding: 0 1.2em 0 1.2em;
   position: relative;
   bottom: 5.25em;
 }
