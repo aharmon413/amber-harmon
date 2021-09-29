@@ -19,7 +19,7 @@ html {
 body {
   color: #503f40;
   font-family: 'Lato', sans-serif;
-  font-size: 1.25em;
+  font-size: 1.2em;
   line-height: 1.25;
 }
 
@@ -37,7 +37,7 @@ header::before {
 nav {
   background: #9f6579;
   width: 100%;
-  height: 15.22em;
+  height: 15.3em;
   padding-top: 5rem;
   position: fixed;
   top: 0;
@@ -108,7 +108,7 @@ main, #hero, #skills, #contact {
 
 main {
   text-align: center;
-  padding-top: 5em;
+  padding-top: 4.85em;
 }
 
 h1, h2 {
@@ -157,7 +157,7 @@ h1 {
 }
 
 #about {
-  height: 19em;
+  height: 23em;
 }
 
 #about p {
@@ -167,8 +167,6 @@ h1 {
 }
 
 .round-section-header {
-  color: #bdccb3;
-  background: #566c57;
   border-radius: 50%;
   width: 6.25rem;
   height: 6.25rem;
@@ -182,19 +180,20 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  color: #bdccb3;
+  background: #566c57;
 }
 
 .skills-header {
-  bottom: 8.25em;
+  bottom: 8.45em;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
-#skills::before {
+#skills::before, #contact::before {
   content: '';
   display: block;
-  background: url(/dist/img/background-misty-rose.png);
   border-radius: 50%;
   border-top: 3px solid rgba(80, 63, 64, 0.15);
   height: 7.5rem;
@@ -204,5 +203,51 @@ h1 {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  background: url(/dist/img/background-misty-rose.png);
+}
+
+#skills {
+  height: 19em;
+}
+
+#skills h2, #skills ul {
+  padding: 0 1.2em 0 1.2em;
+  position: relative;
+}
+
+#skills h2 {
+  bottom: 5em;
+}
+
+#skills ul {
+  list-style-type: none;
+  bottom: 7em;
+}
+
+.projects-header {
+  bottom: 8.45em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#projects::before {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  border-top: 3px solid rgba(80, 63, 64, 0.15);
+  height: 7.5rem;
+  width: 7.5rem;
+  position: relative;
+  bottom: 2.75em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url(/dist/img/background-puce.png);
+}
+
+#projects h2 {
+  position: relative;
+  bottom: 5.25em;
 }
 /*# sourceMappingURL=style.css.map */

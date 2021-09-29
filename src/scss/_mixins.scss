@@ -1,0 +1,24 @@
+@mixin section-divider {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    border-top: 3px solid hsla(355, 12, 28, .15);
+    height: 7.5rem;
+    width: 7.5rem;
+    position: relative;
+    bottom: 2.75em;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+@mixin icon-circles {
+    border-radius: 50%;
+    width: 6.25rem;
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: $laurel-green;
+    background: $russian-green;
+}
