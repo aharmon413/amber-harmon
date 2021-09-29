@@ -94,12 +94,12 @@ button#menu-toggle {
 
 main, #hero, #skills, #contact {
   background-color: #f2dbd9;
-  background: url(/dist/img/background-misty-rose.png);
+  background: url("/img/background-misty-rose.png");
 }
 
 #about, #projects {
   background-color: #cc99a8;
-  background: url(/dist/img/background-puce.png);
+  background: url("/img/background-puce.png");
 }
 
 #about, #skills, #projects, #contact {
@@ -144,7 +144,7 @@ h1 {
 #about::before {
   content: '';
   display: block;
-  background: url(/dist/img/background-puce.png);
+  background: url("/img/background-puce.png");
   border-radius: 50%;
   border-top: 3px solid rgba(80, 63, 64, 0.15);
   height: 12em;
@@ -203,7 +203,7 @@ h1 {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: url(/dist/img/background-misty-rose.png);
+  background: url("/img/background-misty-rose.png");
 }
 
 #skills {
@@ -243,7 +243,7 @@ h1 {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: url(/dist/img/background-puce.png);
+  background: url("/img/background-puce.png");
 }
 
 #projects h2 {
