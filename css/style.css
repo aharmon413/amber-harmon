@@ -1,7 +1,293 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Serif:wght@400;700&display=swap");
+#hero {
+  background-color: #f2dbd9;
+  background: url("/img/background-misty-rose.png");
+  padding: 1.75em;
+}
+
+@media screen and (min-width: 768px) {
+  #hero {
+    padding: 4em;
+  }
+}
+
+#hero h1 {
+  font-size: 3em;
+}
+
+#hero p {
+  font-size: 1.25em;
+  padding: .5em 0 3em 0;
+}
+
+#about::before {
+  content: '';
+  display: block;
+  background: url("/img/background-puce.png");
+  border-radius: 100%;
+  border-top: 3px solid rgba(80, 63, 64, 0.15);
+  height: 12em;
+  width: 12em;
+  position: absolute;
+  top: -3.5em;
+  left: calc(50% - 6em);
+}
+
+@media screen and (min-width: 768px) {
+  #about::before {
+    width: 16.6em;
+    height: 16.6em;
+    left: calc(50% - 8.3em);
+  }
+}
+
+#about {
+  background-color: #cc99a8;
+  background: url("/img/background-puce.png");
+  position: relative;
+}
+
+#about img {
+  border-radius: 50%;
+  border: 5px solid #bdccb3;
+  width: 10.4em;
+  position: absolute;
+  top: -2.75em;
+  left: calc(50% - 5.2em);
+}
+
+@media screen and (min-width: 768px) {
+  #about img {
+    width: 15em;
+    left: calc(50% - 7.5em);
+  }
+}
+
+#about p {
+  text-align: justify;
+  width: 80%;
+  padding: 8.75em 0 3.5em 0;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  #about p {
+    font-size: 1.5em;
+    width: 60%;
+    padding: 9.75em 0 3.5em 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #about p {
+    width: 50%;
+  }
+}
+
+#skills::before {
+  content: '';
+  display: block;
+  border-radius: 100%;
+  border-top: 3px solid rgba(80, 63, 64, 0.15);
+  height: 7em;
+  width: 7em;
+  position: absolute;
+  top: -2.5em;
+  left: calc(50% - 3.5em);
+  background-color: #f2dbd9;
+  background: url("/img/background-misty-rose.png");
+}
+
+#skills {
+  position: relative;
+  background-color: #f2dbd9;
+  background: url("/img/background-misty-rose.png");
+  padding: 5em 0 3em 0;
+}
+
+#skills .technologies {
+  margin: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  #skills .technologies {
+    font-size: 1.5em;
+    margin: 45px auto;
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #skills .technologies {
+    width: 50%;
+  }
+}
+
+#projects::before {
+  content: '';
+  display: block;
+  border-radius: 100%;
+  border-top: 3px solid rgba(80, 63, 64, 0.15);
+  height: 7em;
+  width: 7em;
+  position: absolute;
+  top: -2.5em;
+  left: calc(50% - 3.5em);
+  background-color: #cc99a8;
+  background: url("/img/background-puce.png");
+}
+
+#projects {
+  position: relative;
+  padding: 5em 0 3em 0;
+}
+
+#projects .project-card {
+  background-color: #f4efeb;
+  border: 3px solid #503f40;
+  border-radius: 10px;
+  margin: 1em;
+  padding: .75em;
+}
+
+@media screen and (min-width: 576px) {
+  #projects .project-card {
+    margin: 1.5em 2.5em 1.5em 2.5em;
+    padding: 1em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #projects .project-card {
+    max-width: 43.1875em;
+    padding: 2em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template: auto / 1fr 1fr;
+    grid-gap: 10px 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #projects .project-card {
+    margin: 1.5em auto 1.5em auto;
+  }
+}
+
+#projects .project-card .project-img {
+  border: 2px solid #503f40;
+  border-radius: 5px;
+  width: 90%;
+  margin: 1em auto .5em auto;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  #projects .project-card .project-img {
+    width: 15em;
+  }
+}
+
+#projects .project-card .code-link, #projects .project-card .live-link {
+  display: inline-block;
+  color: #f4efeb;
+  background: #9f6579;
+  font-weight: 700;
+  padding: .5em;
+  margin: .25em;
+  width: 90%;
+  border-radius: 10px;
+  border-bottom: 2px solid #503f40;
+  border-right: 2px solid #503f40;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  #projects .project-card .code-link, #projects .project-card .live-link {
+    width: 15em;
+  }
+}
+
+#projects .project-card .code-link:hover, #projects .project-card .code-link:focus, #projects .project-card .live-link:hover, #projects .project-card .live-link:focus {
+  background: #b28595;
+}
+
+#projects .project-card .code-link:active, #projects .project-card .live-link:active {
+  background: #cc99a8;
+  border-bottom: 2px solid #cc99a8;
+  border-right: 2px solid #cc99a8;
+  -webkit-box-shadow: inset 2px 2px 3px #503f40;
+          box-shadow: inset 2px 2px 3px #503f40;
+}
+
+#projects .project-card h4 {
+  margin-top: .75em;
+}
+
+#projects .project-card .features {
+  text-align: left;
+  margin-left: 1.6em;
+  line-height: 1.75;
+}
+
+#projects .project-card .project-details h4, #projects .project-card .project-details p {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+#contact::before {
+  content: '';
+  display: block;
+  border-radius: 100%;
+  border-top: 3px solid rgba(80, 63, 64, 0.15);
+  height: 7em;
+  width: 7em;
+  position: absolute;
+  top: -2.5em;
+  left: calc(50% - 3.5em);
+  background-color: #f2dbd9;
+  background: url("/img/background-misty-rose.png");
+}
+
+#contact {
+  position: relative;
+  background-color: #f2dbd9;
+  background: url("/img/background-misty-rose.png");
+  padding: 5em 0 3em 0;
+}
+
+#contact .contact-links a {
+  color: #bdccb3;
+}
+
+#contact .contact-links .contact-button {
+  color: #bdccb3;
+  background: #566c57;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  margin: 1em auto .5em auto;
+  text-decoration: none;
+}
+
+#contact .contact-links p {
+  margin-bottom: 1em;
+}
+
+/* 
+    - Style project card on larger devices
+    - Make icons for GitHub, Codepen, and email
+    - Style the contact section for small and large devices
+    - Fix the background overflowing on the mobile nav menu
+    - Make a horizontal nav bar on larger devices
+*/
 html {
+  font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -9,11 +295,6 @@ html {
           box-sizing: inherit;
   margin: 0;
   padding: 0;
-}
-
-html {
-  font-size: 100%;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -92,12 +373,17 @@ button#menu-toggle {
   cursor: pointer;
 }
 
-main, #hero, #skills, #contact {
+main {
+  text-align: center;
+  padding-top: 4.85em;
+}
+
+main, #contact {
   background-color: #f2dbd9;
   background: url("/img/background-misty-rose.png");
 }
 
-#about, #projects {
+#projects {
   background-color: #cc99a8;
   background: url("/img/background-puce.png");
 }
@@ -106,70 +392,31 @@ main, #hero, #skills, #contact {
   border-top: 7px solid rgba(80, 63, 64, 0.15);
 }
 
-main {
-  text-align: center;
-  padding-top: 4.85em;
-}
-
 h1, h2, h3, h4 {
   font-family: 'Noto Serif', serif;
 }
 
-h1 {
-  font-size: 3rem;
+h2, h3 {
+  padding: 0 1.2em 0 1.2em;
 }
 
-#hero {
-  padding: 1.75em;
+@media screen and (min-width: 576px) {
+  h2 {
+    font-size: 2em;
+  }
 }
 
-#hero p {
-  font-size: 1.25em;
-  padding: .5em 0 3em 0;
-}
-
-.highlight {
+.highlight, .technologies {
   color: #566c57;
   font-weight: 700;
 }
 
-.profile-photo {
-  width: 12.5rem;
-  border-radius: 50%;
-  border: 5px solid #bdccb3;
-  position: relative;
-  bottom: 15.25em;
-}
-
-#about::before {
-  content: '';
-  display: block;
-  background: url("/img/background-puce.png");
-  border-radius: 50%;
-  border-top: 3px solid rgba(80, 63, 64, 0.15);
-  height: 12em;
-  width: 12em;
-  position: relative;
-  bottom: 4em;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-#about {
-  height: 23em;
-}
-
-#about p {
-  padding: 0 1.2em 0 1.2em;
-  position: relative;
-  bottom: 14.5em;
-}
-
 .round-section-header {
+  color: #bdccb3;
+  background: #566c57;
   border-radius: 50%;
-  width: 6.25rem;
-  height: 6.25rem;
+  width: 6em;
+  height: 6em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,135 +426,12 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
-  color: #bdccb3;
-  background: #566c57;
+  position: absolute;
+  top: -2em;
+  left: calc(50% - 3em);
 }
 
-.skills-header {
-  bottom: 8.45em;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-#skills::before, #contact::before {
-  content: '';
-  display: block;
-  border-radius: 50%;
-  border-top: 3px solid rgba(80, 63, 64, 0.15);
-  height: 7.5rem;
-  width: 7.5rem;
-  position: relative;
-  bottom: 2.75em;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background: url("/img/background-misty-rose.png");
-}
-
-#skills {
-  height: 19.25em;
-}
-
-#skills h2, #skills ul {
-  padding: 0 1.2em 0 1.2em;
-  position: relative;
-}
-
-#skills h2 {
-  bottom: 5em;
-}
-
-#skills ul {
-  list-style-type: none;
-  bottom: 7em;
-}
-
-.projects-header {
-  bottom: 8.45em;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-#projects::before {
-  content: '';
-  display: block;
-  border-radius: 50%;
-  border-top: 3px solid rgba(80, 63, 64, 0.15);
-  height: 7.5rem;
-  width: 7.5rem;
-  position: relative;
-  bottom: 2.75em;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background: url("/img/background-puce.png");
-}
-
-#projects {
-  height: 55em;
-}
-
-#projects h2 {
-  position: relative;
-  bottom: 5.25em;
-}
-
-#projects .project-card {
-  background-color: #f8f4f2;
-  border: 3px solid #566c57;
-  border-radius: 1rem;
-  margin: 1rem;
-  padding: 1rem;
-  position: relative;
-  bottom: 9rem;
-}
-
-#projects .project-card h3 {
-  padding: 10px 10px 0 10px;
-}
-
-#projects .project-card h4 {
-  padding: 10px 10px 0 10px;
-}
-
-#projects .project-card p, #projects .project-card li {
-  font-size: 1.1rem;
-}
-
-#projects .project-card .project-img {
-  display: block;
-  border: 1px solid #503f40;
-  border-radius: 5px;
-  width: 90%;
-  margin: 15px auto 10px auto;
-}
-
-#projects .project-card .code-link, #projects .project-card .live-link {
-  display: inline-block;
-  color: #f8f4f2;
-  background: #9f6579;
-  font-weight: 700;
-  padding: .5rem;
-  margin: .5rem;
-  width: 90%;
-  border-radius: 10px;
-  border-bottom: 2px solid #503f40;
-  border-right: 2px solid #503f40;
-  text-decoration: none;
-}
-
-#projects .project-card .code-link:active, #projects .project-card .live-link:active {
-  background: #cc99a8;
-  border-bottom: 2px solid #cc99a8;
-  border-right: 2px solid #cc99a8;
-  -webkit-box-shadow: inset 2px 2px 3px #503f40;
-          box-shadow: inset 2px 2px 3px #503f40;
-}
-
-#projects .project-card .technologies {
+.technologies {
   margin: 10px;
   display: -ms-grid;
   display: grid;
@@ -319,24 +443,5 @@ h1 {
           align-items: center;
   justify-items: center;
   gap: 10px 10px;
-}
-
-#projects .project-card .features {
-  list-style-type: circle;
-  text-align: left;
-  padding-left: 1rem;
-}
-
-.contact-header {
-  bottom: 8.45em;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-#contact h2 {
-  padding: 0 1.2em 0 1.2em;
-  position: relative;
-  bottom: 5.25em;
 }
 /*# sourceMappingURL=style.css.map */

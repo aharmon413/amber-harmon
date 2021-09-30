@@ -1,0 +1,27 @@
+#skills::before {
+    @include section-divider;
+    background-color: $misty-rose;
+    background: $misty-rose-bg;
+}
+
+#skills {
+    position: relative;
+    background-color: $misty-rose;
+    background: $misty-rose-bg;
+    padding: 5em 0 3em 0;
+
+    .technologies {
+        margin: 25px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.5em;
+            margin: 45px auto;
+            width: 70%;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 50%;
+        }
+    }
+}
+

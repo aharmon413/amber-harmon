@@ -1,0 +1,33 @@
+#contact::before {
+    @include section-divider;
+    background-color: $misty-rose;
+    background: $misty-rose-bg;
+}
+
+#contact {
+    position: relative;
+    background-color: $misty-rose;
+    background: $misty-rose-bg;
+    padding: 5em 0 3em 0;
+
+    .contact-links {
+        a {
+            color: $laurel-green;
+            
+        }
+        
+        .contact-button {
+            color: $laurel-green;
+            background: $russian-green;
+            border-radius: 50%;
+            width: 4em;
+            height: 4em;
+            margin: 1em auto .5em auto;
+            text-decoration: none;
+        }
+    
+        p {
+            margin-bottom: 1em;
+        }
+    }    
+}

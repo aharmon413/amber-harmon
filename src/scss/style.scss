@@ -1,12 +1,29 @@
-@import "resets";
 @import "variables";
 @import "mixins";
+@import "hero-about";
+@import "skills";
+@import "projects";
+@import "contact";
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Serif:wght@400;700&display=swap');
 
+/* 
+    - Style project card on larger devices
+    - Make icons for GitHub, Codepen, and email
+    - Style the contact section for small and large devices
+    - Fix the background overflowing on the mobile nav menu
+    - Make a horizontal nav bar on larger devices
+*/
 
 html {
     font-size: 100%;
+    box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -79,12 +96,17 @@ button#menu-toggle {
     cursor: pointer;
 }
 
-main, #hero, #skills, #contact {
+main {
+    text-align: center;
+    padding-top: 4.85em;
+}
+
+main, #contact {
     background-color: $misty-rose;
     background: $misty-rose-bg;
 }
 
-#about, #projects {
+#projects {
     background-color: $puce;
     background: $puce-bg;
 }
@@ -93,25 +115,17 @@ main, #hero, #skills, #contact {
     border-top: 7px solid hsla(355, 12, 28, .15);
 }
 
-main {
-    text-align: center;
-    padding-top: 4.85em;
-}
-
 h1, h2, h3, h4 {
     font-family: 'Noto Serif', serif;
 }
 
-h1 {
-    font-size: 3rem;
+h2, h3 {
+    padding: 0 1.2em 0 1.2em;
 }
 
-#hero {
-    padding: 1.75em;
-
-    p {
-        font-size: 1.25em;
-        padding: .5em 0 3em 0;
+h2 {
+    @media screen and (min-width: 576px) {
+        font-size: 2em;
     }
 }
 
@@ -120,171 +134,11 @@ h1 {
     font-weight: 700;
 }
 
-.profile-photo {
-    width: 12.5rem;
-    border-radius: 50%;
-    border: 5px solid $laurel-green;
-    position: relative;
-    bottom: 15.25em;
-}
-
-#about::before {
-    content: '';
-    display: block;
-    background: $puce-bg;
-    border-radius: 50%;
-    border-top: 3px solid hsla(355, 12, 28, .15);
-    height: 12em;
-    width: 12em;
-    position: relative;
-    bottom: 4em;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#about {
-    height: 23em;
-
-    p {
-        padding: 0 1.2em 0 1.2em;
-        position: relative;
-        bottom: 14.5em;
-    }
-}
-
 .round-section-header {
     @include icon-circles;
-
 }
 
-.skills-header {
-    bottom: 8.45em;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#skills::before, #contact::before {
-    @include section-divider;
-    background: $misty-rose-bg;
-}
-
-#skills {
-    height: 19.25em;
-
-    h2, ul {
-        padding: 0 1.2em 0 1.2em;
-        position: relative;
-    }
-
-    h2 {
-        bottom: 5em;
-    }
-
-    ul {
-        list-style-type: none;
-        bottom: 7em;
-    }
-}
-
-.projects-header {
-    bottom: 8.45em;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#projects::before {
-    @include section-divider;
-    background: $puce-bg; 
-}
-
-#projects {
-    height: 55em;
-
-    h2 {
-        position: relative;
-        bottom: 5.25em;
-    }
-
-    .project-card {
-        background-color: $pale-cream;
-        border: 3px solid $russian-green;
-        border-radius: 1rem;
-        margin: 1rem;
-        padding: 1rem;
-        position: relative;
-        bottom: 9rem;
-
-        h3 {
-            padding: 10px 10px 0 10px;
-        }
-
-        h4 {
-            padding: 10px 10px 0 10px;
-        }
-
-        p, li {
-            font-size: 1.1rem;
-        }
-
-        .project-img {
-            display: block;
-            border: 1px solid $warm-brown;
-            border-radius: 5px;
-            width: 90%;
-            margin: 15px auto 10px auto;
-        }
-
-        .code-link, .live-link {
-            display: inline-block;
-            color: $pale-cream;
-            background: $mauve-taupe;
-            font-weight: 700;
-            padding: .5rem;
-            margin: .5rem;
-            width: 90%;
-            border-radius: 10px;
-            border-bottom: 2px solid $warm-brown;
-            border-right: 2px solid $warm-brown;
-            text-decoration: none;
-            
-            &:active {
-                background: $puce;
-                border-bottom: 2px solid $puce;
-                border-right: 2px solid $puce;
-                box-shadow: inset 2px 2px 3px $warm-brown;
-            }
-        }
-
-
-        .technologies {
-            margin: 10px;
-            display: grid;
-            grid-template: auto / 1fr 1fr;
-            align-items: center;
-            justify-items: center;
-            gap: 10px 10px;
-        }
-
-        .features {
-            list-style-type: circle;
-            text-align: left;
-            padding-left: 1rem;
-        }
-
-    }
-    
-}
-
-.contact-header {
-    bottom: 8.45em;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#contact {
-    h2 {
-        padding: 0 1.2em 0 1.2em;
-        position: relative;
-        bottom: 5.25em;
-    }
+.technologies {
+    @extend .highlight;
+    @include two-column-grid;
 }
