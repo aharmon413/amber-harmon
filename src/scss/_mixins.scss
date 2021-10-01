@@ -10,7 +10,7 @@
     left: calc(50% - 3.5em);
 }
 
-@mixin icon-circles {
+@mixin divider-icon-circles {
     color: $laurel-green;
     background: $russian-green;
     border-radius: 50%;
@@ -22,6 +22,21 @@
     position: absolute;
     top: -2em;
     left: calc(50% - 3em);
+}
+
+@mixin small-contact-icons {
+    @include divider-icon-circles;
+    height: 2.25em;
+    width: 2.25em;
+    border-radius: 50%;
+    position: static;
+    display: inline-flex;
+    transition: color .2s linear, background .2s linear;
+
+    &:hover {
+        color: $russian-green;
+        background: $laurel-green;
+    }
 }
 
 @mixin two-column-grid {

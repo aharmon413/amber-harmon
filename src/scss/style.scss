@@ -6,14 +6,6 @@
 @import "contact";
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Serif:wght@400;700&display=swap');
 
-/* 
-    - Style project card on larger devices
-    - Make icons for GitHub, Codepen, and email
-    - Style the contact section for small and large devices
-    - Fix the background overflowing on the mobile nav menu
-    - Make a horizontal nav bar on larger devices
-*/
-
 html {
     font-size: 100%;
     box-sizing: border-box;
@@ -43,57 +35,83 @@ header::before {
     z-index: 2;
 }
 
-nav {
-    background: $mauve-taupe;
+nav.menu {
     width: 100%;
-    height: 15.3em;
-    padding-top: 5rem;
+    height: 4.15em;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    transform: translateY(-100%);
-    transition: transform .3s;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    & .navMenu li {
+        display: inline-block;
+        padding: 0 2em 0 2em;
+        
+        a {
+            color: white;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color .2s linear;
 
-    &.active {
-        transform: translateY(0);
+            &:hover, &:focus {
+                color: $misty-rose;
+            }
+        }
     }
 
-    & .navMenu {
-        text-align: center;
-        list-style-type: none;
+    @media screen and (max-width: 991px) {
+        display: block;
+        width: 100%;
+        height: 15.3em;
+        padding-top: 5rem;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        transform: translateY(-100%);
 
-        li {
-            padding: 0.75em;
-            border-bottom: solid 1px $puce;
+        &.active {
+            transform: translateY(0);
+        }
 
-            a {
-                color: white;
-                font-size: 0.9em;
-                font-weight: 700;
-                text-decoration: none;
+        & .navMenu {
+            background: $mauve-taupe;
+            text-align: center;
+            list-style-type: none;
+
+            li {
+                display: block;
+                padding: 0.75em;
+                border-bottom: solid 1px $puce;
             }
+
         }
     }
 }
   
 button#menu-toggle {
-    color: $warm-brown;
-    background: $laurel-green;
-    font-size: 1.5em;
-    text-align: center;
-    width: 3.125rem;
-    height: 3.125rem;
-    padding: 8px;
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 3;
-    border: solid 1px $warm-brown;
-    border-radius: 3px;
-    cursor: pointer;
+    display: none;
+
+    @media screen and (max-width: 991px) {
+        display: block;
+        color: $warm-brown;
+        background: $laurel-green;
+        font-size: 1.5em;
+        text-align: center;
+        width: 3.125rem;
+        height: 3.125rem;
+        padding: 8px;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 3;
+        border: solid 1px $warm-brown;
+        border-radius: 3px;
+        cursor: pointer;
+    }
 }
 
 main {
@@ -135,10 +153,16 @@ h2 {
 }
 
 .round-section-header {
-    @include icon-circles;
+    @include divider-icon-circles;
 }
 
 .technologies {
     @extend .highlight;
     @include two-column-grid;
+}
+
+footer {
+    background: $mauve-taupe;
+    height: 4.5em;
+    width: 100%;
 }
