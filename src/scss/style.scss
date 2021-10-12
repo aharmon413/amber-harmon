@@ -4,6 +4,7 @@
 @import "skills";
 @import "projects";
 @import "contact";
+@import "frontend-mentor-projects";
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Serif:wght@400;700&display=swap');
 
 html {
@@ -119,7 +120,7 @@ main {
     padding-top: 4.85em;
 }
 
-main, #contact {
+body, #contact {
     background-color: $misty-rose;
     background: $misty-rose-bg;
 }
