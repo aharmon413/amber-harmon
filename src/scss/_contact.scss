@@ -1,40 +1,29 @@
-#contact::before {
-    @include section-divider;
-    background-color: $misty-rose;
-    background: $misty-rose-bg;
-}
+@import "variables";
 
 #contact {
-    position: relative;
-    background-color: $misty-rose;
-    background: $misty-rose-bg;
-    padding: 5em 0 3em 0;
+    padding: 2em 0 4em 0;
 
-    a {
-        text-decoration: none;
-
-        i {
-            @include small-contact-icons;
-            font-size: 1.75em;
-        }
-    }
-
-    .email {
-        font-size: 1.35em;
-        font-weight: 700;
-        padding: 2em 0 2em 0;
+    & h2 {
+        padding: .75em;
     }
 
     .profile-links {
         margin: 0 auto;
-        width: 12.5em;
+        max-width: 300px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-button {
+        color: $warm-gray;
+        background: $coral;
+        border-radius: 50%;
+        width: 5em;
+        height: 5em;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-
-        @media screen and (min-width: 425px) {
-            width: 18.75em;
-        }
+        justify-content: center;
+        text-decoration: none;
+        @include coral-button-hover;
     }
-    
 }

@@ -1,9 +1,27 @@
-$mauve-taupe: hsl(339, 23, 51);
-$puce: hsl(343, 33, 70);
-$misty-rose: hsl(5, 48, 90);
-$laurel-green: hsl(95, 20, 75);
-$russian-green: hsl(122, 11, 38);
-$warm-brown: hsl(355, 12, 28);
-$pale-cream: hsl(23, 28, 94);
-$puce-bg: url('/img/background-puce.png');
-$misty-rose-bg: url('/img/background-misty-rose.png');
+$emerald: hsl(171, 67, 48);
+$mint: hsl(159, 80, 78);
+$coral: hsl(0, 80, 80);
+$darker-coral: hsl(0, 80, 64);
+$warm-gray: hsl(20, 6, 18);
+$light-gray: hsl(0,0,40);
+$off-white: hsl(0, 0, 95);
+
+@mixin tablet {
+    @media screen and (min-width: 765px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin coral-button-hover {
+    &:hover, &:focus {
+        color: #fff;
+        background: $darker-coral;
+        border-color: $coral;
+    }
+}

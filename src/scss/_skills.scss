@@ -1,27 +1,46 @@
-#skills::before {
-    @include section-divider;
-    background-color: $misty-rose;
-    background: $misty-rose-bg;
-}
+@import 'variables';
 
 #skills {
-    position: relative;
-    background-color: $misty-rose;
-    background: $misty-rose-bg;
-    padding: 5em 0 3em 0;
+    padding: 2em 0;
 
-    .technologies {
-        margin: 25px;
+    & h2 {
+        margin: .75em;
+    }
 
-        @media screen and (min-width: 768px) {
-            font-size: 1.5em;
-            margin: 45px auto;
-            width: 70%;
+    .skills-grid {
+        max-width: 21.875em;
+        margin: 1.5em auto 2.5em auto;
+        display: grid;
+        grid-template: auto / 1fr 1fr;
+        grid-gap: 1em;
+
+        @media screen and (min-width: 600px) {
+            max-width: 37.5em;
+            grid-template: auto / repeat(4, 1fr);
         }
 
-        @media screen and (min-width: 1200px) {
-            width: 50%;
+        @include desktop {
+            max-width: 65.625em;
+            grid-template: auto / repeat(8, 1fr);
+            grid-gap: 3em;
         }
     }
-}
 
+    .short-grid {
+        margin-bottom: 0;
+
+        @include desktop {
+            grid-template: auto / repeat(4, 1fr);
+        }
+    }
+
+    .skill-icon {
+        width: 4em;
+        height: 4em;
+    }
+
+    .skill-label {
+        color: $mint;
+        opacity: .85;
+    }  
+}

@@ -8,72 +8,140 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/afbccdfb83.js" crossorigin="anonymous"></script>
-    <title>Amber Harmon | Web Developer</title>
+    <!-- TypeIt.js -->
+    <script src="https://unpkg.com/typeit@8.2.0/dist/index.umd.js"></script>
+    <!-- Devicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <title>Amber Harmon | Web Developer in Tampa, FL</title>
 </head>
 
 <body>
     <header>
+        <a href="index.html" class="name">AMH</a>
         <button id="menu-toggle"
-                class="fas fa-bars fa-2x"
+                class="fas fa-bars"
                 aria-label="Open navigation menu"
                 aria-expanded="false"></button>
-        <nav class="menu"    
-             aria-label="Navigation menu">
-            <ul class="navMenu">
-                <li><a href="#about">About</a></li>
+        <nav role="navigation">
+            <ul class="nav-menu">
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <!-- <li><a href="#" class="resume"><i class="fas fa-file-alt"></i> Resume</a></li> -->
             </ul>
         </nav>
+
     </header>
     
     <main>
         <section id="hero">
-            <h1>Hello World, I'm Amber.</h1>
-            <p>I'm a <span class="highlight">front-end developer</span> and <span class="highlight">web designer</span> located in the Tampa Bay area.</p>
-        </section>
-
-        <section id="about">
-            <img src="img/amber-photo.png" alt="Amber Harmon profile photo">
-            <p>I started teaching myself how to code for the web in the summer of 2020 and haven't stopped since. My favorite thing about programming is the growth mindset that learning to code taught me. Instead of being afraid of challenges, now I get excited to tackle a problem and see what I can do.</p>
+            <div class="hero-wrapper">
+                <div class="hero-text">
+                    <h1>Hello world, I'm&nbsp;Amber.</h1>
+                    <p>I am a <span class="highlight">junior front end developer</span> based in the Tampa&nbsp;Bay area.</p>
+                </div>
+                <div class="laptop-animation">
+                    <div class="screen">
+                        <span id="typed"></span> 
+                    </div>
+                    <i class="fas fa-laptop laptop"></i>
+                </div>
+            </div>
+            <div class="top-divider divider">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+                </svg>
+            </div>
         </section>
     
         <section id="skills">
-            <div class="round-section-header">
-                <i class="fas fa-code fa-2x"></i>
+            <h2>I work with languages and technologies including</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" class="skill-icon"/>
+                    <p class="skill-label">HTML</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" class="skill-icon"/>
+                    <p class="skill-label">CSS</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" class="skill-icon"/>
+                    <p class="skill-label">JavaScript</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="" class="skill-icon"/>
+                    <p class="skill-label">Sass</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" class="skill-icon"/>
+                    <p class="skill-label">React</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" class="skill-icon"/>
+                    <p class="skill-label">Git</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" class="skill-icon"/>
+                    <p class="skill-label">GitHub</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="" class="skill-icon"/>
+                    <p class="skill-label">VS Code</p>
+                </div>
             </div>
-            <h2>My technical skills include:</h2>
-            <span class="highlight technologies">
-                <p>HTML 5</p>
-                <p>CSS 3</p>
-                <p>Sass/SCSS</p>
-                <p>JavaScript ES6</p>
-                <p>jQuery</p>
-                <p>Version Control</p>
-            </span>
+
+            <h2>I'm also familiar with</h2>
+            <div class="skills-grid short-grid">
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="" class="skill-icon"/>
+                    <p class="skill-label">Bootstrap</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg" alt="" class="skill-icon" />
+                    <p class="skill-label">jQuery</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="" class="skill-icon"/>
+                    <p class="skill-label">Redux</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" class="skill-icon"/>
+                    <p class="skill-label">Python</p>
+                </div>
+            </div>
         </section>
             
         <section id="projects">
-            <div class="round-section-header">
-                <i class="fas fa-file-alt fa-2x"></i>
+            <div class="bottom-divider divider">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+                </svg>
             </div>
-            <h2>Here is some of my work.</h2>
-            <div class="project-card">
-                <div class="project-basics">
-                    <h3>JavaScript Calculator</h3>
-                    <img src="img/calculator.png" alt="JavaScript calculator" class="project-img">
-                    <a href="https://github.com/aharmon413/js-calculator" class="code-link" target="_blank" aria-label="View the source code for JavaScript Calculator">CODE</a> <a href="https://calculator.amberharmon.com/" class="live-link" target="_blank" aria-label="View a live demo of JavaScript Calculator">LIVE</a>
-                    <h4>Technologies Used</h4>
-                    <div class="technologies">
-                        <p>HTML 5</p>
-                        <p>CSS 3</p>
-                        <p>JavaScript</p>
-                        <p>jQuery</p>
+            <h2>Here are some of my projects.</h2>
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-image">
+                        <img src="img/calculator.png" alt="JavaScript calculator">
+                    </div>
+                    <div class="project-title">
+                        <a href="https://github.com/aharmon413/js-calculator" class="code-link" target="_blank" aria-label="View the source code for JavaScript Calculator">CODE</a>
+                        <a href="https://calculator.amberharmon.com/" class="live-link" target="_blank" aria-label="View a live demo of JavaScript Calculator">LIVE</a>
+                        <h3>JavaScript + jQuery Calculator</h3>
+                        <div class="technologies">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JavaScript</p>
+                            <p>jQuery</p>
+                        </div>
                     </div>
                 </div>
-                <div class="project-details">
+                <div class="project-description">
                     <h4>Features</h4>
                     <ul class="features">
                         <li>Four basic mathematical operations</li>
@@ -81,47 +149,76 @@
                         <li>Positive/negative sign, backspace, and decimal point buttons</li>
                     </ul>
                     <h4>Description</h4>
-                    <p>A simple calculator written in (mostly) vanilla JavaScript. The biggest challenge of this project was deciding how to structure the code in a neat and scalable way. I ended up using an MVC design pattern to much success. </p>
+                    <p>A simple calculator written in mostly vanilla JavaScript with a touch of jQuery. The biggest challenge of this project was figuring out how to structure the code in a neat and scalable way. Halfway through the project, I ended up rewriting the app using an MVC design pattern to much success. You can see how much of a difference this refactoring made by looking at <a href="https://github.com/aharmon413/js-calculator/pull/3/files?diff=split&w=0" target="_blank">the pull request</a> from when I merged the changes into the main branch.</p>
                 </div>
             </div>
-
-            <div class="project-card">
-                <div class="project-basics">
-                    <h3>Frontend Mentor Projects</h3>
-                    <img src="img/fem-social-proof.png" alt="Frontend Mentor projects" class="project-img">
-                    <a href="frontend-mentor-projects.html" class="code-link" aria-label="View all Frontend Mentor projects">VIEW PROJECTS</a>
-                    <h4>Technologies Used</h4>
-                    <div class="technologies">
-                        <p>HTML 5</p>
-                        <p>CSS 3</p>
-                        <p>JavaScript</p>
-                        <p>Sass</p>
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-image">
+                        <img src="img/fcc.png" alt="FreeCodeCamp">
+                    </div>
+                    <div class="project-title">
+                        <a href="https://codepen.io/aharmon413/pens/tags/?selected_tag=freecodecamp" class="view-link" target="_blank" aria-label="View FreeCodeCamp projects">VIEW PROJECTS</a>
+                        <h3>FreeCodeCamp Projects</h3>
+                        <div class="technologies">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JavaScript</p>
+                            <p>React</p>
+                            <p>Sass</p>
+                            <p>jQuery</p>
+                        </div>
                     </div>
                 </div>
-                <div class="project-details">
-                    <h4>Description</h4>
-                    <p><a href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor</a> is a site that provides coding challenges for learning developers. Available practice projects include pricing components, profile cards, feature sections, simple form validation, and more. Starter files are provided with the objective of creating a page as close to the design screenshots as possible. I like these challenges because they allow me to experiment with new skills and techniques, and it also trains my attention to detail as I try to match the designs.</p>
+                    <div class="project-description">
+                        <h4>Description</h4>
+                        <p>FreeCodeCamp has been an integral part of my coding journey and I'm incredibly thankful for the content they offer. At the moment, I have earned <a href="https://www.freecodecamp.org/aharmon413" target="_blank">three of their certifications</a> and I'm working on completing more. Each certification requires the completion of five projects that pass a series of automated tests. All of my FreeCodeCamp projects are posted on my CodePen profile.</p>
+                    </div>
+                
+            </div>
+            
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-image">
+                        <img src="img/fem.png" alt="Frontend Mentor">
+                    </div>
+                    <div class="project-title">
+                        <a href="https://github.com/aharmon413?tab=repositories&q=frontend+mentor&type=&language=&sort=" class="view-link" target="_blank" aria-label="View Frontend Mentor projects">VIEW PROJECTS</a>
+                        <h3>Frontend Mentor Challenges</h3>
+                        <div class="technologies">
+                            <p>HTML</p>
+                            <p>CSS</p>
+                            <p>JavaScript</p>
+                            <p>Sass</p>
+                        </div>
+                    </div>
                 </div>
+                <div class="project-description">
+                    <h4>Description</h4>
+                    <p><a href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor</a> is a site that provides challenges for learning developers to build things like pricing components, profile cards, feature sections, simple form validation, and more. Starter files are provided with the objective of creating a page as close to the design screenshots as possible. I like these challenges because they allow me to experiment with new skills and techniques, and it also trains my attention to detail as I try to match the designs. Each project I have completed has a corresponding GitHub repo with links to a live site and more details about how I completed the challenge.</p>
+                </div>
+            </div>
+            <div class="top-divider divider">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+                </svg>
             </div>
         </section>
     
         <section id="contact">
-            <div class="round-section-header">
-                <i class="fas fa-comments fa-2x"></i>
-            </div>
             <h2>Like what you see? Let's chat!</h2>
-            <p class="email">amber@amberharmon.com</p>
             <div class="profile-links">
-                <a href="mailto:amber@amberharmon.com" class="contact-button" target="_blank" aria-label="Mail to amber@amberharmon.com"><i class="far fa-envelope"></i></a>
-                <a href="https://github.com/aharmon413" class="contact-button" target="_blank" aria-label="View Amber Harmon on GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://codepen.io/aharmon413" class="contact-button" target="_blank" aria-label="View Amber Harmon on CodePen"><i class="fab fa-codepen"></i></a>
+                <a href="mailto:amber@amberharmon.com" class="contact-button" target="_blank" aria-label="Mail to amber@amberharmon.com"><i class="far fa-envelope fa-3x"></i></a>
+                <a href="https://github.com/aharmon413" class="contact-button" target="_blank" aria-label="View Amber Harmon on GitHub"><i class="fab fa-github fa-3x"></i></a>
+                <a href="https://www.linkedin.com/in/amber-m-harmon/" class="contact-button" target="_blank" aria-label="View Amber Harmon on LinkedIn"><i class="fab fa-linkedin fa-3x"></i></a>
             </div>
         </section>
     </main>
 
     <footer>
+        <p>amber@amberharmon.com</p>
     </footer>
-
+    
     <script src="/js/script.js"></script>
 </body>
 </html>
