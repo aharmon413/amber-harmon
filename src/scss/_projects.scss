@@ -4,15 +4,7 @@
     padding: 5em 0 2em 0;
 
     @include tablet {
-        padding-bottom: 6em;
-    }
-
-    @include tablet {
-        padding-top: 6em;
-    }
-
-    @include desktop {
-        padding-top: 7em;
+        padding: 6em 0 7em 0;
     }
 
     & h2 {
@@ -21,54 +13,58 @@
 }
 
 .project {
+    .project-header, .project-description {
+        margin: 0 auto;
+    }
 
     .project-header {
-        margin: 0 auto;
+        max-width: 75em;
 
         @include desktop {
-            max-width: 1200px;
             display: grid;
             grid-template: 1fr / 1fr 1fr;
             align-items: center;
             column-gap: 1.5em;
         }
-    }
 
-    .project-image {
-        @include desktop {
+        & .project-image img, & .project-title {
+            width: 90%;
+            max-width: 25em;
+        }
+
+        & img {
+            border: 3px solid $warm-gray;
+        }
+
+        & .project-image {
             justify-self: end;
+            
         }
     }
-
-    & .project-image img, & .project-title {
-        width: 90%;
-        max-width: 400px;
-    }
     
-    & .project-image img {
-        border: 3px solid $warm-gray;
-    }
-
     & .project-title {
         margin: .75em auto;
         border-top: 1em solid $emerald;
         border-bottom: 1em solid $emerald;
+        justify-self: start;
 
         @include desktop {
             text-align: left;
             margin: 0;
             height: 14.875em;
-            justify-self: start;
+        }
+
+        & a, .technologies {
+            margin: 1em 0;
         }
 
         & a {
-            text-align: center;
             display: inline-block;
             color: $warm-gray;
+            text-align: center;
             text-decoration: none;
             border: 3px solid $light-gray;
             border-radius: 1em;
-            margin: 1em 0;
             padding: .25em;
             width: 7em;
             @include coral-button-hover;
@@ -82,48 +78,40 @@
             }
         }
 
-        .technologies {
-            margin: 1em 0;
-            
-            & p {
-                display: inline;
-                color: $darker-coral;
+        .technologies p {
+            display: inline;
+            color: $darker-coral;
                 
-                &:not(:first-child) {
-                    margin-left: 1em;
-                }
+            &:not(:first-child) {
+                margin-left: 1em;
             }
         }
-    
     }
-
+    
     .project-description {
-        line-height: 1.25;
-        margin: 0 auto;
-        width: 90%;
         text-align: left;
-        max-width: 400px;
+        line-height: 1.25;
+        width: 90%;
+        max-width: 25em;
         
         @include desktop {
             margin: 1em auto;
-            max-width: 780px;
+            max-width: 48.75em;
+        }
+
+        & ul, & p {
+            @include desktop {
+                font-size: 1.2em;
+            }
         }
 
         & ul {
             list-style-position: inside;
             margin-bottom: 1em;
-
-            @include desktop {
-                font-size: 1.2em;
-            }
         }
 
         & p {
             margin-bottom: 2.5em;
-
-            @include desktop {
-                font-size: 1.2em;
-            }
         }
 
         & a {
