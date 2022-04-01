@@ -30,7 +30,7 @@
         margin-bottom: 0;
 
         @include desktop {
-            grid-template: auto / repeat(3, 1fr);
+            grid-template: auto / repeat(4, 1fr);
         }
     }
 
