@@ -105,17 +105,17 @@ nav {
                 display: inline-block;
                 padding: 0 2em 0 2em;
 
-                // .resume {
-                //     color: $warm-gray;
-                //     background: $coral;
-                //     padding: .5em;
-                //     border-radius: 5px;
+                .resume {
+                    color: $warm-gray;
+                    background: $coral;
+                    padding: .5em;
+                    border-radius: 5px;
 
-                //     &:hover, &:focus {
-                //         color: #fff;
-                //         background: $darker-coral;
-                //     }
-                // }
+                    &:hover, &:focus {
+                        color: #fff;
+                        background: $darker-coral;
+                    }
+                }
             }
         }
     }
