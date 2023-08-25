@@ -21,7 +21,7 @@
 
         @include desktop {
             max-width: 65.625em;
-            grid-template: auto / repeat(7, 1fr);
+            grid-template: auto / repeat(8, 1fr);
             grid-gap: 3em;
         }
     }
@@ -30,7 +30,7 @@
         margin-bottom: 0;
 
         @include desktop {
-            grid-template: auto / repeat(4, 1fr);
+            grid-template: auto / repeat(3, 1fr);
         }
     }
 

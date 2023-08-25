@@ -56,7 +56,11 @@ body, #hero, #projects {
     position: relative;
 }
 
-h2, h3, #hero p {
+#hero p {
+    font-size: 1.6em;
+}
+
+h2, h3 {
     font-size: 1.5em;
 
     @include desktop {
